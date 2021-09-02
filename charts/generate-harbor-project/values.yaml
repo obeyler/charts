@@ -1,0 +1,21 @@
+fullnameOverride: curl
+#nameOverride:
+
+image:
+  name: curlimages/curl
+  tag: 7.78.0
+  pullPolicy: Always
+  repository: docker.io
+  #pullSecret:
+
+project: project-name # must be changed
+storage_limit: 0
+server:
+  url: https://harbor.xxxxxx
+  admin:
+    secretName: credential
+    user: admin # must be changed
+    password: xxxxxx # must be changed
+generateCredential: true
+
+

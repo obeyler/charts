@@ -1,0 +1,5 @@
+salt: xxx # must be changed
+cluster: cluster-1 # must be changed
+generateSecret: true
+generateStorageclass: true
+

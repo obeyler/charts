@@ -1,0 +1,27 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{.Values.project }}-create-project
+spec:
+  template:
+    spec:
+      volumes:
+        - name: script
+          configMap:
+            name: {{ template "generate-script-cm-name" . }}
+      containers:
+        - name: config
+          image: {{ .Values.image.repository }}/{{ .Values.image.name }}:{{ .Values.image.tag }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          command:
+            - sh
+            - /scripts/create-project.sh
+          volumeMounts:
+            - mountPath: "/scripts/create-project.sh"
+              subPath: create-project.sh
+              name: script
+          envFrom:
+            - secretRef:
+                name: {{ .Values.server.admin.secretName }}
+      restartPolicy: Never
+  backoffLimit: 4
