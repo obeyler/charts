@@ -1,0 +1,16 @@
+{{- if .Values.deployDashboard }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.name }}-cfgmap
+data:
+  conf.yml: |
+    {{- with .Values.welcome }}
+      welcome:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.components }}
+      components:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+{{- end }}
