@@ -42,8 +42,8 @@ spec:
       volumes:
         - name: config
           configMap:
-            name: {{ .Values.name }}-cfgmap
+            name: '{{ .Values.name }}-cfgmap'
         - name: secrets
           secret:
-            name: {{ .Values.name }}-secret
+            name: '{{ .Values.name }}-secret'
 {{- end }}

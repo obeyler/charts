@@ -3,9 +3,9 @@ entries:
   generate-harbor-project:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-10-19T14:05:32.836009936+02:00"
+    created: "2021-10-19T16:12:18.024382919+02:00"
     description: A Helm chart for Kubernetes
-    digest: d2913e19aa373174fd785197cdb471b062040345781c393fb431135295c8e49d
+    digest: 02c5a215aff30d3fb4de1691485957b5495238bb219861b60a4bb5b419fb05af
     name: generate-harbor-project
     type: application
     urls:
@@ -14,9 +14,9 @@ entries:
   generate-hysiokub-dashboard:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-10-19T14:05:32.836255744+02:00"
+    created: "2021-10-19T16:12:18.025284001+02:00"
     description: A Helm chart for Kubernetes
-    digest: 706c06da524375d24e3040cf86de09a6055a96a945e5d68b215e53cf849cf108
+    digest: ec0bc9c7192db26661c653f4c0e3b779eae163d405cfe91ed6aba9cdd8ba638b
     name: generate-hysiokub-dashboard
     type: application
     urls:
@@ -25,9 +25,9 @@ entries:
   generate-longhorn-encrypted-storageclass:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-10-19T14:05:32.836374109+02:00"
+    created: "2021-10-19T16:12:18.025654955+02:00"
     description: A Helm chart for Kubernetes
-    digest: 7b6a3236fd61714a50bad7b90478a619aef6046b72138d61e92fe75db28e6884
+    digest: 135b8452759f7210374f95dad8af4a1b7bebbd65b63121e12a7449401d2fab5b
     name: generate-longhorn-encrypted-storageclass
     type: application
     urls:
@@ -36,12 +36,12 @@ entries:
   generate-minio-bucket:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-10-19T14:05:32.836534131+02:00"
+    created: "2021-10-19T16:12:18.025845232+02:00"
     description: A Helm chart for Kubernetes
-    digest: de214e503cbbf4391e6cab16ddaf4d6adcca132cc702dd4330ba3c86d9672689
+    digest: e1b952779a2ff7c68d21136d3c6f63c652eb855820168da3ec62a581cce15215
     name: generate-minio-bucket
     type: application
     urls:
     - generate-minio-bucket-0.1.7.tgz
     version: 0.1.7
-generated: "2021-10-19T14:05:32.835746399+02:00"
+generated: "2021-10-19T16:12:18.023378385+02:00"
