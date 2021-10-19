@@ -3,9 +3,9 @@ entries:
   generate-harbor-project:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-10-19T16:12:18.024382919+02:00"
+    created: "2021-10-19T16:22:22.889336187+02:00"
     description: A Helm chart for Kubernetes
-    digest: 02c5a215aff30d3fb4de1691485957b5495238bb219861b60a4bb5b419fb05af
+    digest: adc13bb72ca8b30a7918eab9de093789e2534cfdfcafd6c10914cc6ab1b8fa6a
     name: generate-harbor-project
     type: application
     urls:
@@ -14,9 +14,9 @@ entries:
   generate-hysiokub-dashboard:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-10-19T16:12:18.025284001+02:00"
+    created: "2021-10-19T16:22:22.889714192+02:00"
     description: A Helm chart for Kubernetes
-    digest: ec0bc9c7192db26661c653f4c0e3b779eae163d405cfe91ed6aba9cdd8ba638b
+    digest: 17b37be077183c12a6623c868e4ea5a1b52b8842cf559c5356ba87da5dbaae2a
     name: generate-hysiokub-dashboard
     type: application
     urls:
@@ -25,9 +25,9 @@ entries:
   generate-longhorn-encrypted-storageclass:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-10-19T16:12:18.025654955+02:00"
+    created: "2021-10-19T16:22:22.89001871+02:00"
     description: A Helm chart for Kubernetes
-    digest: 135b8452759f7210374f95dad8af4a1b7bebbd65b63121e12a7449401d2fab5b
+    digest: 6c778e9a471e3889a078e45e999f4709d6dd8a9ffd922287ac90e43732068f61
     name: generate-longhorn-encrypted-storageclass
     type: application
     urls:
@@ -36,12 +36,12 @@ entries:
   generate-minio-bucket:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-10-19T16:12:18.025845232+02:00"
+    created: "2021-10-19T16:22:22.890251942+02:00"
     description: A Helm chart for Kubernetes
-    digest: e1b952779a2ff7c68d21136d3c6f63c652eb855820168da3ec62a581cce15215
+    digest: 793874cd675fc7f677536986beba098ff27bf1c91dea5a75d63569d4ab3c22fd
     name: generate-minio-bucket
     type: application
     urls:
     - generate-minio-bucket-0.1.7.tgz
     version: 0.1.7
-generated: "2021-10-19T16:12:18.023378385+02:00"
+generated: "2021-10-19T16:22:22.888910922+02:00"

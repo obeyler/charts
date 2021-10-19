@@ -45,5 +45,5 @@ spec:
             name: '{{ .Values.name }}-cfgmap'
         - name: secrets
           secret:
-            name: '{{ .Values.name }}-secret'
+            secretName: '{{ .Values.name }}-secret'
 {{- end }}
