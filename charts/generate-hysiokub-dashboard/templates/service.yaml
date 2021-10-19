@@ -1,0 +1,14 @@
+{{- if .Values.deployDashboard }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.name }}-service
+spec:
+  type: ClusterIP
+  selector:
+    app: {{ .Values.name }}
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3030
+{{- end }}

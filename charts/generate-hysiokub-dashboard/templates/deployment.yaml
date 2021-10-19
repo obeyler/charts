@@ -1,0 +1,49 @@
+{{- if .Values.deployDashboard }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.name }}
+  labels:
+    name: {{ .Values.name }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.name }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ .Values.name }}-service-account
+      securityContext:
+        runAsUser: 1000
+        runAsGroup: 3000
+        fsGroup: 2000
+      containers:
+        - name: {{ .Values.name }}
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: 3030
+          volumeMounts:
+            - name: config
+              mountPath: /usr/src/dashboard/conf/conf.yml
+              subPath: conf.yml
+            - name: secrets
+              mountPath: /usr/src/dashboard/conf/secrets.yml
+              subPath: secrets.yml
+          securityContext:
+            allowPrivilegeEscalation: false
+      volumes:
+        - name: config
+          configMap:
+            name: {{ .Values.name }}-cfgmap
+        - name: secrets
+          secret:
+            name: {{ .Values.name }}-secret
+{{- end }}

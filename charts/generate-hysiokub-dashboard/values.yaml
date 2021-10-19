@@ -1,0 +1,51 @@
+# Configuration
+name: dashboard-admin
+deployDashboard: true
+
+# Credentials
+login: admin
+salt: xxxxx
+cluster: xxxxx
+
+# Ingress
+ingress:
+  ingressClass: nginx
+  host: dashboard.domain.com
+
+# Image
+image:
+  repository: docker.io/dashboard
+  pullPolicy: IfNotPresent
+  tag: "1.0"
+imagePullSecrets: []
+
+# Dashboard configuration
+welcome:
+  title: "Bienvenue Admin"
+  content: "Pour l'accès à un composant, cliquez sur un logo"
+
+components:
+  - name: rancher
+    url: ""
+    width: 90%
+  - name: minio
+    url: ""
+    width: 90%
+  - name: argo
+    url: ""
+    width: 90%
+  - name: grafana
+    url: ""
+    width: 90%
+  - name: gitlab
+    url: ""
+    width: 90%
+  - name: vault
+    url: ""
+    width: 90%
+  - name: ldap
+    url: ""
+    width: 100%
+  - name: prometheus
+    url: ""
+    width: 100%
