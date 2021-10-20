@@ -9,6 +9,7 @@ cluster: xxxxx
 
 # Ingress
 ingress:
+  isAuth: true
   ingressClass: nginx
   host: dashboard.domain.com
 

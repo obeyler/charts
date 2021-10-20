@@ -3,8 +3,13 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
-    kubernetes.io/ingress.class: {{ .Values.ingress.ingressClass}}
+    kubernetes.io/ingress.class: {{ .Values.ingress.ingressClass }}
     cert-manager.io/cluster-issuer: selfsigned-issuer
+    {{- if .Values.ingress.isAuth }}
+    nginx.ingress.kubernetes.io/auth-type: basic
+    nginx.ingress.kubernetes.io/auth-secret: {{ .Values.name }}-secret
+    nginx.ingress.kubernetes.io/auth-realm: Authentication Required
+    {{- end }}
   name: {{ .Values.name }}-ingress
 spec:
   rules:

@@ -34,16 +34,10 @@ spec:
             - name: config
               mountPath: /usr/src/dashboard/conf/conf.yml
               subPath: conf.yml
-            - name: secrets
-              mountPath: /usr/src/dashboard/conf/secrets.yml
-              subPath: secrets.yml
           securityContext:
             allowPrivilegeEscalation: false
       volumes:
         - name: config
           configMap:
             name: '{{ .Values.name }}-cfgmap'
-        - name: secrets
-          secret:
-            secretName: '{{ .Values.name }}-secret'
 {{- end }}
